@@ -80,6 +80,8 @@ export default async (profile: Profile, when: Date, reasons: Reasons[]): Promise
     })
 
     await page.evaluate(function () {
+        // Hacky way to get the Blob content downloaded by the app since puppeteer/chromium does not seem to manage an event for this
+        // Don't do this at home
         const previous = URL.createObjectURL;
         URL.createObjectURL = function(data) {
             const reader = new FileReader();
