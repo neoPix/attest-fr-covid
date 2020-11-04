@@ -1,6 +1,6 @@
 # attest-fr-covid
 
-The library relies on the official web application https://media.interieur.gouv.fr/deplacement-covid-19/. It uses Puppetter under the hood to automatically fill the fields and generate an attestation. Multiple profiles can be added simplifying the automation after that.
+The library relies on the official web application [https://media.interieur.gouv.fr/deplacement-covid-19/](https://media.interieur.gouv.fr/deplacement-covid-19/). It uses Puppetter under the hood to automatically fill the fields and generate an attestation. Multiple profiles can be added simplifying the automation after that.
 
 ## Installation
 
@@ -48,8 +48,6 @@ main();
 ```
 
 ## CLI Usage
-
-Generate attestations
 
 ```bash
 ## Add a profile
