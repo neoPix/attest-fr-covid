@@ -12,6 +12,7 @@
   "main": "dist/index.js",
   "scripts": {
     "prepublish": "npm run build",
+    "postinstall": "npm run build",
     "build": "tsc",
     "postbuild": "chmod +x ./dist/bin.js",
     "dev": "ts-node ./lib/bin.ts"
