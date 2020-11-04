@@ -2,3 +2,4 @@ tsconfig.json
 .gitignore
 lib
 node_modules
+_db.json

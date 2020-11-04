@@ -3,6 +3,7 @@ import day from 'dayjs';
 import ms from 'ms';
 
 import Deferred from './deferred';
+import { Profile, Reasons } from './interfaces';
 
 const reasonsAddress = {
     work: '#checkbox-travail',
@@ -14,28 +15,6 @@ const reasonsAddress = {
     legal: '#checkbox-convocation',
     mission: '#checkbox-missions',
     child: '#checkbox-enfants'
-}
-
-export enum Reasons {
-    work = 'work',
-    buy = 'buy',
-    health = 'health',
-    family = 'family',
-    handicap = 'handicap',
-    sport = 'sport',
-    legal = 'legal',
-    mission = 'mission',
-    child = 'child'
-};
-
-export interface Profile {
-    firstName: string;
-    lastName: string;
-    birthday: Date;
-    placeOfBirth: string;
-    address: string;
-    city: string;
-    postalCode: string;
 }
 
 export default async (profile: Profile, when: Date, reasons: Reasons[]): Promise<Buffer> => {
@@ -56,7 +35,7 @@ export default async (profile: Profile, when: Date, reasons: Reasons[]): Promise
     await page.type('#field-zipcode', profile.postalCode);
     // date
     await page.type('#field-datesortie', day(when).format('DDMMYYYY'));
-    await page.type('#field-heuresortie', day(when).format('HHmmss'));
+    await page.type('#field-heuresortie', day(when).format('hhmmA'));
 
     for(const reason of reasons) {
         if (reason in reasonsAddress) {
