@@ -13,15 +13,15 @@ npm i -g attest-fr-covid
 
 Valid reasons :
 
-- work
-- buy
-- health
-- family
-- handicap
-- sport
-- legal
-- mission
-- child
+- `work`
+- `buy`
+- `health`
+- `family`
+- `handicap`
+- `sport`
+- `legal`
+- `mission`
+- `child`
 
 ## Code usage
 
