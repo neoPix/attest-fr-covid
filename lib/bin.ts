@@ -49,10 +49,18 @@ const profile = program.command('profile');
 
 profile.command('ls')
     .description('list all the registered profiles')
-    .option('-p, --pretty', 'display th JSON in a clean and readable way')
+    .option('-p, --pretty', 'display the JSON in a clean and readable way')
+    .option('-js, --json', 'output as json')
     .option('-o, --output <file>', 'The file to write the output to, if not set, it will write to std')
     .action(async (args) => {
         await DBManager.load();
+        const isJSON = args.json || args.pretty || args.output;
+
+        if(!isJSON) {
+            console.table(DBManager.list());
+            return;
+        }
+
         const data = Buffer.from(JSON.stringify(DBManager.list(), null, args.pretty ? 2 : 0));
         if(args.output) {
             await writeFileP(args.output, data);
