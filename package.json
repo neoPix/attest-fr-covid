@@ -11,11 +11,12 @@
   },
   "main": "dist/index.js",
   "scripts": {
+    "prepublish": "npm run build",
     "build": "tsc",
     "postbuild": "chmod +x ./dist/bin.js",
     "dev": "ts-node ./lib/bin.ts"
   },
-  "author": "neoPix",
+  "author": "neopixl",
   "license": "ISC",
   "dependencies": {
     "commander": "^6.2.0",

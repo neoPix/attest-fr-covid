@@ -3,3 +3,4 @@ tsconfig.json
 lib
 node_modules
 _db.json
+_config.yml
