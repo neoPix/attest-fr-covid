@@ -1,5 +1,5 @@
 import { Profile } from "./interfaces";
-import { readFile, writeFile } from 'fs';
+import { readFile, writeFile, existsSync } from 'fs';
 import { promisify } from 'util';
 
 const readFileP = promisify(readFile);
@@ -32,6 +32,9 @@ export default class DBManager {
         }, {});
     }
     public static async load(): Promise<void> {
+        if(!existsSync(DB_PATH)) {
+            return;
+        }
         const data: ProfileObject = JSON.parse(await readFileP(DB_PATH, 'utf8'));
         for(const [identifier, profile] of Object.entries(data)) {
             profiles.set(identifier, profile);
