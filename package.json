@@ -17,7 +17,7 @@
     "dev": "ts-node ./lib/bin.ts"
   },
   "author": "neopixl",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "commander": "^6.2.0",
     "dayjs": "^1.9.4",
