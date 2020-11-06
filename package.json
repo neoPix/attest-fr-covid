@@ -1,6 +1,6 @@
 {
   "name": "attest-fr-covid",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Node library and cli for generating french gov' authorizations during lock-down",
   "repository": {
     "type": "git",
