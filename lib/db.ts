@@ -1,12 +1,13 @@
 import { Profile } from "./interfaces";
 import { readFile, writeFile, existsSync } from 'fs';
+import { join, resolve } from 'path';
 import { promisify } from 'util';
 
 const readFileP = promisify(readFile);
 const writeFileP = promisify(writeFile);
 
 const profiles = new Map<string, Profile>();
-const DB_PATH = './_db.json';
+const DB_PATH = resolve(join(module.path, '../.profiles_db.json'));
 
 type ProfileObject = { [key: string]: Profile };
 

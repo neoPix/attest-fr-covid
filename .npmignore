@@ -4,3 +4,4 @@ lib
 node_modules
 _db.json
 _config.yml
+.profiles_db.json

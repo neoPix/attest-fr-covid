@@ -23,7 +23,8 @@
     "prepublish": "npm run build",
     "build": "tsc",
     "postbuild": "chmod +x ./dist/bin.js",
-    "dev": "ts-node ./lib/bin.ts"
+    "dev": "ts-node ./lib/bin.ts",
+    "postinstall": "node migrate.js"
   },
   "author": "neopixl",
   "license": "MIT",
