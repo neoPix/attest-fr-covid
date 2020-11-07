@@ -1,6 +1,6 @@
 {
   "name": "attest-fr-covid",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Node library and cli for generating french gov' authorizations during lock-down",
   "repository": {
     "type": "git",
@@ -10,7 +10,15 @@
     "attest-fr-covid": "dist/bin.js"
   },
   "main": "dist/index.js",
-  "keywords": ["covid", "attestation", "cli", "library", "pdf", "france", "lockdown"],
+  "keywords": [
+    "covid",
+    "attestation",
+    "cli",
+    "library",
+    "pdf",
+    "france",
+    "lockdown"
+  ],
   "scripts": {
     "prepublish": "npm run build",
     "build": "tsc",
