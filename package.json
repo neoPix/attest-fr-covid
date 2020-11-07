@@ -10,6 +10,7 @@
     "attest-fr-covid": "dist/bin.js"
   },
   "main": "dist/index.js",
+  "keywords": ["covid", "attestation", "cli", "library", "pdf", "france", "lockdown"],
   "scripts": {
     "prepublish": "npm run build",
     "build": "tsc",
