@@ -27,7 +27,7 @@ export default async (profile: Profile, when: Date, reasons: Reasons[]): Promise
             '--no-sandbox',
             '--disable-setuid-sandbox'
         ],
-        headless: false,
+        headless: true,
     });
     const page = await browser.newPage();
 
